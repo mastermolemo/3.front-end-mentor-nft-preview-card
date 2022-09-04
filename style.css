@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--main-BG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card {
+    width: 88%;
+    max-width: 345px;
+    background-color: var(--card-BG);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.hero {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.green-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    background-color: var(--Cyan);
+    border-radius: 10px;
+    opacity: 0.5;
+    display: none;
+}
+
+.icon-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.image-container:hover > .green-overlay {
+    display: block;
+}
+
+.image-container:hover > .icon-view {
+    display: block;
+}
+
+h2 {
+    color: var(--White);
+    cursor: pointer;
+}
+
+h2:hover {
+    color: var(--Cyan);
+}
+
+p {
+    font-size: 18px;
+    color: var(--Soft-blue);
+}
+
+.eth-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+}
+
+.eth-container > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.eth-container > div:nth-child(1) > p {
+    color: var(--Cyan);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.avatar > img {
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid var(--White);
+}
+
+.avatar > p {
+    color: var(--Soft-blue);
+}
+
+.avatar > p > span {
+    cursor: pointer;
+}
+
+.avatar > p > span:hover {
+    color: var(--Cyan);
+}
